@@ -1,0 +1,37 @@
+{
+  "name": "fs_chat",
+  "version": "1.0.0",
+  "description": "full stack chat app",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack -w",
+    "server": "nodemon ./app/server/index.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinStotts/FS_chat.git"
+  },
+  "author": "Austin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austinStotts/FS_chat/issues"
+  },
+  "homepage": "https://github.com/austinStotts/FS_chat#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "~7",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "css-loader": "^2.0.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.8",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "style-loader": "^0.23.1"
+  }
+}

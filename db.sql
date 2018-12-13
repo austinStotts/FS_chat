@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS chat;
-CREATE DATABASE chat;
 USE chat;
 
 -- messages

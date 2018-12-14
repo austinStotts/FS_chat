@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users`
 (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(24) NOT NULL,
+  `username` VARCHAR(24) UNIQUE NOT NULL,
   `password` VARCHAR(24) NOT NULL,
   PRIMARY KEY(`id`)
 );

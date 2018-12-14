@@ -22,6 +22,7 @@ app.get('*', (req, res) => {
 app.post('*', (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
+  
   // login
   if(req.body.type === 'login') {
     const qry = 'SELECT users.password FROM users WHERE users.username =' + `'${username}'`
@@ -38,6 +39,7 @@ app.post('*', (req, res) => {
       }
     })
   }
+
   // signup
   else if(req.body.type === 'signup') {
     const qry = `INSERT INTO users VALUES (0,'${username}','${password}')` 

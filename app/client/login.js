@@ -40,7 +40,7 @@ class Login extends Component {
       <div>
         <h4>login</h4>
         <div><input placeholder="username" onChange={e=>this.setState({username:e.target.value})}></input></div>
-        <div><input placeholder="password" onChange={e=>this.setState({password:e.target.value})}></input></div>
+        <div><input type="password" placeholder="password" onChange={e=>this.setState({password:e.target.value})}></input></div>
         <div><button onClick={_=>this.checkDB()}>Submit</button></div>
         <div><button onClick={_=>{console.log('go to signup'); this.props.signup()}} onMouseOver={e=>e.currentTarget.textContent="signup"} onMouseLeave={e=>e.currentTarget.textContent="new?"}>{'new?'}</button></div>
         <div><h3><em>{this.state.err}</em></h3></div>

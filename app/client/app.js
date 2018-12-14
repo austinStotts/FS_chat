@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Login from './login';
 import Signup from './signup';
+import Chat from './chat';
 
+// absolute parent for FS_chat app
 export default class App extends Component {
   constructor (props) {
     super(props);
@@ -13,6 +15,7 @@ export default class App extends Component {
     this.goSignup = this.goSignup.bind(this);
     this.goLogin = this.goLogin.bind(this);
     this.loggedIn = this.loggedIn.bind(this);
+    this.logout = this.logout.bind(this);
   }
 
   goSignup () {
@@ -33,6 +36,14 @@ export default class App extends Component {
       username: un
     })
   }
+  
+  logout () {
+    this.setState({
+      login: false,
+      signup: false,
+      username: ''
+    })
+  }
 
   render () {
     const l = this.state.login;
@@ -49,7 +60,7 @@ export default class App extends Component {
 
     // if login = true
     else if (l) {
-      return <div><h1>{'welcome :) ' + this.state.username}</h1></div>
+      return <Chat logout={this.logout} username={this.state.username}/>
     }
   }
 }

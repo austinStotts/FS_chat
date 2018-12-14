@@ -7,26 +7,42 @@ export default class Chats extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      text: ''
+      text: '',
+      err: ''
     }
     this.send = this.send.bind(this);
   }
 
   send () {
     let message = this.state.text;
-    Axios.post('http://localhost:3000', {
-      username: this.props.username,
-      message: message,
-      type: 'add'
-    })
-    .then(d=>{console.log('back from server', d.data.reverse()); this.props.addMessages(d)})
-    .catch(err=>console.log('err', err));
+    if(message.length > 0) {
+      Axios.post('http://localhost:3000', {
+        username: JSON.stringify(this.props.username),
+        message: JSON.stringify(message),
+        type: 'add'
+      })
+      .then(d=>{
+        console.log('back from server', d.data.reverse()); 
+        this.props.addMessages(d);
+        this.setState({text:'',err:''})
+        this.refs.input.value = '';
+      })
+      .catch(err=>console.log('err', err));
+    } else {
+      this.setState({
+        err:'no message input'
+      })
+    }
   }
 
   render () {
     return (
-      <div>
-        <input placeholder="message..." onChange={e=>this.setState({text:e.target.value})}></input><button onClick={this.send}>send</button>
+      <div className='chat-wrap-main'>
+        <div className='chat-wrapper'>
+          <input className='chat-input' maxLength='250' placeholder="message..." ref='input' onChange={e=>this.setState({text:e.target.value})}></input>
+          <button className='chat-submit' onClick={_=>this.send()}>send</button>
+          <p className='chat-err'><em>{this.state.err}</em></p>
+        </div>
       </div>
     )
   }

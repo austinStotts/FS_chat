@@ -82,7 +82,7 @@ app.post('*', (req, res) => {
   // add message
   else if (req.body.type === 'add') {
     const now = moment().format('YYYY-MM-DD hh:mm:ss');
-    const qry = `INSERT INTO messages VALUES (0, '${req.body.username}', '${req.body.message}', '${now}')`;
+    const qry = `INSERT INTO messages VALUES (0, ${req.body.username}, ${req.body.message}, '${now}')`;
     console.log('\n> POST', '\n> Add Message To DB');
     console.log('> Using -->', '"'+qry+'"');
     connect.query(qry, (err,data) => {

@@ -12,6 +12,7 @@ export default class Chat extends Component {
     this.state = {
       messages: [],
     }
+    this.colors = ['#0074D9','#7FDBFF','#39CCCC','#3D9970','#2ECC40','#01FF70','#FFDC00','#FF851B','#85144b','#F012BE','#B10DC9'];
     this.addMessages = this.addMessages.bind(this);
   }
 
@@ -36,8 +37,10 @@ export default class Chat extends Component {
     return (
       <div>
         <div>
-          <h2>chat</h2><button onClick={this.props.logout}>logout</button>
-          <h3>{'user: ' + this.props.username}</h3>
+          <button onClick={this.props.logout}>logout</button>
+          <h3 className='user-id'>{'user: '}<p className='user'
+          style={{color:this.colors[Math.floor(Math.random()*this.colors.length)]}}
+          >{this.props.username}</p></h3>
         </div>
         <div>
           <Chats addMessages={this.addMessages} username={this.props.username} />

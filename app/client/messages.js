@@ -8,7 +8,7 @@ export default class Messages extends Component {
     this.state = {
 
     }
-    this.colors = ['#0074D9','#7FDBFF','#39CCCC','#3D9970','#2ECC40','#01FF70','#FFDC00','#FF851B','#FF4136','#85144b','#F012BE','#B10DC9'];
+    this.colors = ['#00539C','#0074D9','#7FDBFF','#39CCCC','#3D9970','#2ECC40','#01FF70','#FFDC00','#FF851B','#FE840E','#BD3D3A','#E94B3C','#FF4136','#FF6F61','#F012BE','#C62168','#6B5B95','#B10DC9','#DBB1CD'];
   }
   
   render () {

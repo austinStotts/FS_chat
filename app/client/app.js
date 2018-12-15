@@ -60,7 +60,7 @@ export default class App extends Component {
 
     // if login = true
     else if (l) {
-      return <div className='chat-main'><Chat logout={this.logout} username={this.state.username}/></div>
+      return <Chat logout={this.logout} username={this.state.username}/>
     }
   }
 }

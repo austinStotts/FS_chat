@@ -35,15 +35,17 @@ export default class Chat extends Component {
 
   render () {
     return (
-      <div>
-        <div>
-          <button onClick={this.props.logout}>logout</button>
-          <h3 className='user-id'>{'user: '}<p className='user'
-          style={{color:'#FFDC00'}}
-          >{this.props.username}</p></h3>
-        </div>
-        <div>
-          <Chats addMessages={this.addMessages} username={this.props.username} />
+      <div id='chat-wrap'>
+        <div id='chat-top'>
+          <div>
+            <button className='logout' onClick={this.props.logout}>logout</button>
+            <h3 className='user-id'>{'user: '}<p className='user'
+            style={{color:'#FFDC00'}}
+            >{this.props.username}</p></h3>
+          </div>
+          <div>
+            <Chats addMessages={this.addMessages} username={this.props.username} />
+          </div>
         </div>
         <div>
           <Messages messages={this.state.messages} />

@@ -1,12 +1,24 @@
+html {
+  
+  min-height: 100%;
+}
 .chat-main {
   margin-left: 5%;
+  
+}
+.chat-top {
+  width: 100%;
+  height: 300px;
+  background: rgb(255, 150, 145);
+  background: -webkit-linear-gradient(top, rgb(255, 150, 145) 0%, rgb(255, 118, 111) 100%);
+  background: linear-gradient(to bottom, rgb(255, 150, 145) 0%, rgb(255, 118, 111) 100%);
 }
 .message-wrapper {
   display: inline-block;
 }
 .wrapper {
-  border-top: 2px solid black;
-  border-bottom: 2px solid;
+  border-top: 1px solid black;
+  border-bottom: 1px solid;
   width: 90%;
 }
 
@@ -47,13 +59,14 @@
 }
 .chat-wrapper {
   padding: 10px 0px 20px 0px;
-  border-bottom: 2px solid plum;
+  border-bottom: 3px palevioletred;
+  border-bottom-style: double;
 }
 .chat-wrap-main {
   width: 90%;
 }
 .username {
-  color: #FF4136;
+  color: #3D9970;
   padding: 0px;
   margin: 5px 0px 0px 0px;
   font-size: 16px;
@@ -85,4 +98,71 @@
   font-size: 16px;
   padding: 0px;
   margin: 20px 0px 0px 0px;
+}
+
+.username-input {
+  font-size: 20px;
+  outline: none;
+  width: 200px;
+  height: 30px;
+  border: 2px solid black;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+
+.password-input {
+  font-size: 20px;
+  outline: none;
+  width: 200px;
+  height: 30px;
+  border: 2px solid black;
+  padding: 2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.login-submit {
+  outline: none;
+  margin-top: 5px;
+  padding: 1px;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: 10px;
+  font-size: 16px;
+  height: 30px;
+  width: 80px;
+  border: 2px solid #3D9970;
+  cursor: pointer;
+}
+.login-submit:hover {
+  background-color: rgb(56, 213, 143);
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+.switch {
+  outline: none;
+  margin-top: 5px;
+  padding: 1px;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: 10px;
+  font-size: 16px;
+  height: 30px;
+  width: 80px;
+  border: 2px solid #3D9970;
+  cursor: pointer;
+}
+
+.switch:hover {
+  background-color: rgb(56, 213, 143);
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+.login-text {
+  font-family: 'Source Code Pro', monospace;
+  padding: 0px;
+  margin: 10px 0px 10px 20px;
+  font-size: 30px;
 }

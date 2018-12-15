@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import Axios from 'axios';
 
 // shows all messages from database
@@ -27,7 +27,7 @@ export default class Messages extends Component {
                 </span>
               </div>
               </div>
-              )
+            )
           })}
         </div>
       )

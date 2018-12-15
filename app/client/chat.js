@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import Messages from './messages'
 import Chats from './chats';
 import Axios from 'axios';
@@ -39,7 +39,7 @@ export default class Chat extends Component {
         <div>
           <button onClick={this.props.logout}>logout</button>
           <h3 className='user-id'>{'user: '}<p className='user'
-          style={{color:this.colors[Math.floor(Math.random()*this.colors.length)]}}
+          style={{color:'#FFDC00'}}
           >{this.props.username}</p></h3>
         </div>
         <div>

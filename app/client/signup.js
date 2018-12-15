@@ -35,11 +35,11 @@ class Signup extends Component {
   render () {
     return (
       <div>
-        <h4>signup</h4>
-        <div><input placeholder="username" onChange={e=>this.setState({username:e.target.value})}></input></div>
-        <div><input placeholder="password" onChange={e=>this.setState({password:e.target.value})}></input></div>
-        <div><button onClick={_=>this.checkDB()}>Submit</button></div>
-        <div><button onClick={_=>{console.log('go to login'); this.props.login()}} onMouseOver={e=>e.currentTarget.textContent="login"} onMouseLeave={e=>e.currentTarget.textContent="back?"}>{'back?'}</button></div>
+        <h4 className='login-text'>signup</h4>
+        <div><input className='username-input' placeholder=" username" onChange={e=>this.setState({username:e.target.value})}></input></div>
+        <div><input className='password-input' placeholder=" password" onChange={e=>this.setState({password:e.target.value})}></input></div>
+        <div><button className='login-submit' onClick={_=>this.checkDB()}>Submit</button></div>
+        <div><button className='switch'onClick={_=>{console.log('go to login'); this.props.login()}} onMouseOver={e=>e.currentTarget.textContent="login"} onMouseLeave={e=>e.currentTarget.textContent="back?"}>{'back?'}</button></div>
         <div><h3><em>{this.state.err}</em></h3></div>
         <div><h3><em>{this.state.err2}</em></h3></div>
       </div>
